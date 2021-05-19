@@ -1,0 +1,18 @@
+<!doctype>
+<html>
+  <head>
+    <title>
+    {% block title %}{% endblock %}
+    </title>
+  </head>
+
+  <body>
+  <p>
+  <a href="{% url 'll_log:index' %}"> Learning Log Home </a> <hr/>
+  <a href="{% url 'll_log:topics' %}"> Topics </a>
+
+  {% block content %} {% endblock %}
+  </p>
+  </body>
+  
+</html>

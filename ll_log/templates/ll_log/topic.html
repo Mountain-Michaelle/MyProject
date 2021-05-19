@@ -1,0 +1,21 @@
+{% extends "ll_log/base.html" %}
+
+{% block title %} {% endblock %}
+
+
+{% block content %}
+<p> <h2> <i>Topic:</i>  <strong>{{ topic }}</strong> </h2> </p>
+
+<p> Entries </p>
+<ul>
+{% for entry in entries %}
+  <li>
+    <p> {{ entry.data_added|date:'M d, Y H:i' }} </p>
+    <p> {{ entry.text|linebreaks }} </p>
+{% empty %}
+  <li> There are no entries for this topic</li>
+
+{% endfor %}
+</ul>
+
+ {% endblock %}
